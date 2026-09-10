@@ -3,5 +3,4 @@ CREATE TABLE employees (
   name TEXT NOT NULL,
   department TEXT,
   created_at TIMESTAMPTZ DEFAULT NOW(),
-  phonenumber BIGINT
 );
