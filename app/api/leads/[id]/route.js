@@ -5,6 +5,7 @@ import { supabase } from '../../../../lib/supabaseClient';
 
 export async function GET(request, { params }) {
   const { id } = await params;
+
   const { data, error } = await supabase
     .from('lead')
     .select('*')
