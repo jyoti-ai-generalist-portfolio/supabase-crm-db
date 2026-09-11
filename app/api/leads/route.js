@@ -20,7 +20,8 @@ export async function POST(request) {
       .insert([{ name, company: company || null, email, status: 'New' }])
       .select()
       .single();
-
+    
+    
     if (leadError) {
       console.error('Lead insert failed:', leadError);
       return NextResponse.json({ error: 'Could not save lead.' }, { status: 500 });
